@@ -1,0 +1,28 @@
+// C++ code
+//
+int PIN = 4;
+void setup()
+{
+  pinMode(PIN, OUTPUT);
+  pinMode(A2, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int pot = analogRead(A2);
+  if(pot>=512)
+  {
+  digitalWrite(PIN, HIGH);
+  Serial.println(pot);
+  }
+  else
+  {
+  
+  digitalWrite(PIN, LOW);
+  Serial.println(pot);
+  delay(pot);
+  }
+  
+  
+}
